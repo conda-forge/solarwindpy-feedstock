@@ -60,7 +60,7 @@ about:
     and plasma instability studies.
   dev_url: https://github.com/blalterman/SolarWindPy
   license: BSD-3-Clause
-  license_file: LICENSE.rst
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
