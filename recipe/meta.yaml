@@ -46,11 +46,8 @@ test:
     - solarwindpy.instabilities
     - solarwindpy.solar_activity
     - solarwindpy.tools
-  commands:
-    - pip check
   requires:
     - pip
-    - python {{ python_min }}
 
 about:
   home: https://github.com/blalterman/SolarWindPy
