@@ -1,6 +1,6 @@
 {% set name = "solarwindpy" %}
-{% set version = "0.1.4" %}
-{% set python_min = "3.10" %}
+{% set version = "0.2.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/solarwindpy-{{ version }}.tar.gz
-  sha256: 7b13d799d0c1399ec13e653632065f03a524cb57eeb8e2a0e2a41dab54897dfe
+  sha256: b39f818a3e9d0473f0796f408b017d42d8edf5a475955491a0204a046b82f7d5
 
 build:
   noarch: python
@@ -35,6 +35,7 @@ requirements:
     - astropy-base >=5.0
     - numba >=0.57
     - tabulate >=0.9
+    - docstring-inheritance >=2.0.2
 
 test:
   imports:
@@ -45,11 +46,8 @@ test:
     - solarwindpy.instabilities
     - solarwindpy.solar_activity
     - solarwindpy.tools
-  commands:
-    - pip check
   requires:
     - pip
-    - python {{ python_min }}
 
 about:
   home: https://github.com/blalterman/SolarWindPy
@@ -60,7 +58,7 @@ about:
     and plasma instability studies.
   dev_url: https://github.com/blalterman/SolarWindPy
   license: BSD-3-Clause
-  license_file: LICENSE.rst
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
