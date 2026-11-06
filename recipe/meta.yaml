@@ -1,5 +1,5 @@
 {% set name = "solarwindpy" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/solarwindpy-{{ version }}.tar.gz
-  sha256: e42cedec4f0abf0b6cd490d0be0226033e4967ebbff528bcf1d0efa8622441da
+  sha256: a245cd7b199ad61fe345d07c0dc8dcd3362a739118aeeb0ef9a94cb8d3ac5008
 
 build:
   noarch: python
@@ -18,21 +18,21 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=61
+    - setuptools >=77
     - wheel
     - setuptools-scm
     - pip
   run:
     - python >={{ python_min }},<4
-    - numpy >=1.26,<3.0
+    - numpy >=2.0,<3.0
     - scipy >=1.16
     - pandas >=3,<4
-    - numexpr >=2.8
-    - bottleneck >=1.3
-    - pytables >=3.9
-    - matplotlib-base >=3.10
+    - numexpr >=2.10.2
+    - bottleneck >=1.4.2
+    - pytables >=3.10.1
+    - matplotlib-base >=3.11
     - astropy-base >=8
-    - numba >=0.59
+    - numba >=0.60
     - tabulate >=0.9
     - docstring-inheritance >=3.0,<4
 
